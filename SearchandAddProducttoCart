@@ -9,9 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-//created by Jesse Penber, 7/20 update: Added results Sort based on Lowest Price
-//To do: standardize which product is picked by clicking the first one with the class Organic
-// full Class organic-impression display-inline-block listing-link logged
+//Etsy website test suite, created by Jesse Penber 7-20-2018
+//searches for a word, selects the first relevant product from the results, and adds it to cart
 
 public class AddToCartTestsorted {
 	public static void main(String[] args) {
@@ -41,19 +40,6 @@ public class AddToCartTestsorted {
 		//click the first relevant product displayed, does not work if member from top row, Ad, is clicked
 		WebElement product = driver.findElement(By.partialLinkText("kitty"));
 		product.click();
-		
-		//NOT WORKING. loop through list of elements, look for the one that's Organic
-		//List<WebElement> listOfLinks = driver.findElements(By.partialLinkText("Cat"));
-		//System.out.println(listOfLinks);
-		
-		//for (WebElement element : listOfLinks) {
-		//	if (element.getClass().toString() == "organic-impression display-inline-block listing-link  logged") {
-		//		WebElement product = driver.findElement(By.partialLinkText("Cat"));
-		//		product.click();		
-		//	}
-		//}
-		
-		//product.click();
 		
 		//give time for page to load
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
