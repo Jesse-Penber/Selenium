@@ -13,6 +13,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+//Created by Jesse Penber, 7-24-2018
+//logs into Etsy user account
+
 public class LoginTestwithTestNG {
 
 	WebDriver driver;
